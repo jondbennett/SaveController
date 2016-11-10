@@ -10,7 +10,7 @@ There is no "seek" method.
 Also, to save wear and tear on the EEPROM, all data is "updated," meaning that if the
 value in EEPROM is already correct then it is not re-written.
 
-Usage is ease:
+Usage is easy:
 Instantiate the object
 ```
 CSaveController g_saveController('T', 'e', 's', 't');
@@ -24,11 +24,13 @@ After instantiating the object, check the version number of the data:
 
 ```
 if(g_saveController.getDataVersion() != MY_DATA_VERSION)
-	// save your default settings.
+	g_doorController.saveSettings(g_saveController);
+else
+	g_doorController.loadSettings(g_saveController);
 ```
 
 After that, have any objects that need to load and save settings do so
-by giving them a loadSettings and saveSettings method:
+by giving them a loadSettings and saveSettings methods (use any name you like):
 
 ```
 void CDoorController::saveSettings(CSaveController &_saveController)
