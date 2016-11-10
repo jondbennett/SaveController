@@ -12,22 +12,25 @@ value in EEPROM is already correct then it is not re-written.
 
 Usage is ease:
 Instantiate the object
+```
 CSaveController g_saveController('T', 'e', 's', 't');
+```
 
 Note that the four characters "Test" make up a header group so that if
 you use the same arduino on multiple projects then you can detect that
 the data from the last project is not of the correct kind. I use the
 initials of the project, or some such, to uniquely identify each project.
 After instantiating the object, check the version number of the data:
-'''
+
+```
 if(g_saveController.getDataVersion() != MY_DATA_VERSION)
 	// save your default settings.
-'''
-
+```
 
 After that, have any objects that need to load and save settings do so
 by giving them a loadSettings and saveSettings method:
-'''
+
+```
 void CDoorController::saveSettings(CSaveController &_saveController)
 {
 	// Save settings
@@ -45,5 +48,4 @@ void CDoorController::loadSettings(CSaveController &_saveController)
 	setSunsetType(sunsetType);
 }
 
-
-'''
+```
