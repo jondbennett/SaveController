@@ -1,0 +1,18 @@
+CSaveController	KEYWORD1
+updateHeader	KEYWORD2
+getDataVersion	KEYWORD2
+rewind	KEYWORD2
+readData	KEYWORD2
+updateData	KEYWORD2
+readByte	KEYWORD2
+writeByte	KEYWORD2
+readBool	KEYWORD2
+writeBool	KEYWORD2
+readInt	KEYWORD2
+writeInt	KEYWORD2
+readFloat	KEYWORD2
+writeFloat	KEYWORD2
+readDouble	KEYWORD2
+writeDouble	KEYWORD2
+
+
