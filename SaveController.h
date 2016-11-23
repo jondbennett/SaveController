@@ -48,6 +48,9 @@ class CSaveController
 	int readInt() { int v; readData((uint8_t *)&v, sizeof(v)); return v; }
 	void writeInt(int _v) { updateData((uint8_t *)&_v, sizeof(_v)); }
 
+	unsigned long readULong() { unsigned long v; readData((uint8_t *)&v, sizeof(v)); return v; }
+	void writeULong(unsigned long _v) { updateData((uint8_t *)&_v, sizeof(_v)); }
+
 	float readFloat() { float v; readData((uint8_t *)&v, sizeof(v)); return v; }
 	void writeFloat(float _v) { updateData((uint8_t *)&_v, sizeof(_v)); }
 
